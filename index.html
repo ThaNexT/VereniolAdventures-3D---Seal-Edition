@@ -144,7 +144,7 @@
 
             // Background
             scene.background = new THREE.Color(0x4682B4);
-            loader.load('aurora_skybox.jpg',
+            loader.load('https://raw.githubusercontent.com/yourusername/vereniol-adventures-3d/main/aurora_skybox.jpg',
                 (texture) => { scene.background = texture; checkLoadingComplete(); },
                 undefined,
                 (err) => { console.warn('Failed to load aurora_skybox.jpg', err); checkLoadingComplete(); }
@@ -158,13 +158,13 @@
             let soundEnabled = true;
             const sounds = {
                 background: new Howl({
-                    src: ['lofi.mp3'],
+                    src: ['https://github.com/ThaNexT/VereniolAdventures-3D---Seal-Edition/blob/main/lofi.mp3'],
                     loop: true,
                     volume: 0.5,
                     autoplay: false
                 }),
                 bark: new Howl({
-                    src: ['bark.wav'],
+                    src: ['https://github.com/ThaNexT/VereniolAdventures-3D---Seal-Edition/blob/main/bark.wav'],
                     volume: 0.8
                 })
             };
@@ -193,7 +193,7 @@
 
             // Snowy ground
             let groundMaterial = new THREE.MeshBasicMaterial({ color: 0xFFFFFF });
-            loader.load('snow_texture.png',
+            loader.load('https://raw.githubusercontent.com/yourusername/vereniol-adventures-3d/main/snow_texture.png',
                 (texture) => { groundMaterial = new THREE.MeshBasicMaterial({ map: texture }); ground.material = groundMaterial; checkLoadingComplete(); },
                 undefined,
                 (err) => { console.warn('Failed to load snow_texture.png', err); checkLoadingComplete(); }
@@ -207,7 +207,7 @@
             // Seal (player)
             const sealGeometry = new THREE.BoxGeometry(1, 0.6, 1.5);
             let sealMaterial = new THREE.MeshBasicMaterial({ color: 0x555555 });
-            loader.load('seal_texture.png',
+            loader.load('https://raw.githubusercontent.com/yourusername/vereniol-adventures-3d/main/seal_texture.png',
                 (texture) => { sealMaterial = new THREE.MeshBasicMaterial({ map: texture }); seal.material = sealMaterial; checkLoadingComplete(); },
                 undefined,
                 (err) => { console.warn('Failed to load seal_texture.png', err); checkLoadingComplete(); }
