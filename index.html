@@ -120,7 +120,20 @@
             document.getElementById('loading').style.display = "none";
             console.error(message);
         }
+// Background
+scene.background = new THREE.Color(0x4682B4);
+loader.load('https://raw.githubusercontent.com/yourusername/vereniol-adventures-3d/main/aurora_skybox.jpg',
+    (texture) => { scene.background = texture; }
+);
 
+// Ground
+const groundMaterial = new THREE.MeshBasicMaterial({ map: loader.load('https://raw.githubusercontent.com/yourusername/vereniol-adventures-3d/main/snow_texture.png') });
+
+// Seal
+const sealMaterial = new THREE.MeshBasicMaterial({ map: loader.load('https://raw.githubusercontent.com/yourusername/vereniol-adventures-3d/main/seal_texture.png') });
+
+// Platforms
+const platformMaterial = new THREE.MeshBasicMaterial({ map: loader.load('https://raw.githubusercontent.com/yourusername/vereniol-adventures-3d/main/platform_texture.png') });
         try {
             // Scene setup
             const scene = new THREE.Scene();
